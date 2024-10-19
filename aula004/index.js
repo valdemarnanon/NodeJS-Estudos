@@ -5,12 +5,14 @@ async function readdir(rootDir) {
     
     rootDir = rootDir || path.resolve(__dirname);
     const files = await fs.readdir(rootDir);
-    walk(files);
+    walk(files, rootDir);
 }
 
-function walk(files) {
+async function walk(files, rootDir) {
     for(let file of files) {
-        console.log(file);
+        const fileFullPath = path.resolve(rootDir, file);
+        const stats = await fs.stat(fileFullPath);
+        console.log(file, stats);
     }
 }
-readdir('C:\Users\chelsea\Documents\NodeJS Estudos\aula004');
+readdir();
