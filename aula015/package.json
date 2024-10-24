@@ -1,5 +1,5 @@
 {
-  "name": "aula015",
+  "name": "aula014",
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
@@ -27,7 +27,7 @@
     "@babel/core": "^7.9.6",
     "@babel/preset-env": "^7.9.6",
     "babel-loader": "^8.1.0",
-    "nodemon": "^3.1.7",
+    "nodemon": "^2.0.4",
     "webpack": "^5.95.0",
     "webpack-cli": "^5.1.4"
   }
