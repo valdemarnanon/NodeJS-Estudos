@@ -1,12 +1,13 @@
 const express = require('express');
 const app = express();
 
+
 app.get('/', (req, res) => {
-    res.send('<h1>Bem vindo ao meu app!</h1>');
+    res.sendFile(__dirname + '/html/index.html');
 });
 
 app.get('/sobre', (req, res) => {
-    res.send('<h1>Sobre nós</h1>');
+    res.sendFile(__dirname + '/html/sobre.html');
 });
 
 app.get('/blog', (req, res) => {
@@ -18,9 +19,6 @@ app.get('/ola/:cargo/:nome/:cor', (req, res) => {
          "<h2> Seu cargo é: " + req.params.cargo + '</h2>' +
          "<h3> Sua cor favorita é: " + req.params.cor + '</h3>');
 });
-
-
-
 
 
 
