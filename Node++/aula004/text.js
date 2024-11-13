@@ -18,10 +18,10 @@ const Postagem = sequelize.define('postagens', {
 });
 
 // cria Registro
-Postagem.create({
-    titulo: "O começo de um futuro",
-    conteudo: "Vdd fei"
-})
+// Postagem.create({
+//     titulo: "O começo de um futuro",
+//     conteudo: "Vdd fei"
+// })
 
 // Cria BD
 const Trabalho = sequelize.define('trabalhos', {
@@ -43,8 +43,8 @@ const Trabalho = sequelize.define('trabalhos', {
 });
 
 // essa função vai sincronizar
-Postagem.sync({force: true}); // Já criado.
-Trabalho.sync({force: true}); // Já criado.
+// Postagem.sync({force: true}); // Já criado.
+// Trabalho.sync({force: true}); // Já criado.
 
 // Saber se conectou ou não // PROMISSES
 sequelize.authenticate()
